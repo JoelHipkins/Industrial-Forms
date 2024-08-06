@@ -1,0 +1,245 @@
+header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	background-color: transparent;
+	z-index: 1000;
+	transition: background-color .1s $CubicEaseInOut;
+
+	&.sticky {
+		background-color: rgba(255, 255, 255, 0.9);
+
+		.logo {
+			@include HD {
+				width: 180px;
+			}
+
+			@include UXGA {
+				width: 240px;
+			}
+		}
+	}
+
+	.logo {
+		margin: 5px 0;
+		width: 140px;
+
+		@include HD {
+			width: 270px;
+		}
+
+		@include UXGA {
+			width: auto;
+		}
+
+		@include FHD {
+			width: auto;
+			margin: 10px 0;
+		}
+	}
+	
+	.burger {
+		position: absolute;
+		right: 0;
+		top: 0;
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		margin-top: 20px;
+		z-index: 2000;
+
+		@include XGA {
+			margin-top: 45px;
+			display: none;
+		}
+
+		.line {
+			width: 20px;
+			height: 4px;
+			background-color: #000;
+			transition: background-color .3s $CubicEaseInOut .3s, width .3s $CubicEaseInOut;
+			border-radius: 2px;
+
+			&:before {
+				content: "";
+				position: absolute;
+				top: 8px;
+				right: 0;
+				width: 13px;
+				height: 4px;
+				background-color: #000;
+				transition: background-color .3s $CubicEaseInOut .3s, width .3s $CubicEaseInOut;
+				border-radius: 2px;
+			}
+
+			&:after {
+				content: "";
+				position: absolute;
+				top: 16px;
+				right: 0;
+				width: 16px;
+				height: 4px;
+				background-color: #000;
+				transition: background-color .3s $CubicEaseInOut .3s, width .3s $CubicEaseInOut;
+				border-radius: 2px;
+			}
+		}
+
+		&.open {
+			position: fixed;
+			right: 5%;
+
+			.line {
+				margin-top: 8px;
+				background-color: #000;
+				transform: rotate(-45deg);
+				transition: background-color .3s $CubicEaseInOut .3s, width .3s $CubicEaseInOut, transform .3s $CubicEaseInOut;
+
+				&:before {
+					right: 0;
+					top: 0;
+					background-color: #000;
+					width: 20px;
+					transform: rotate(90deg);
+					transition: background-color .3s $CubicEaseInOut .3s, width .3s $CubicEaseInOut, transform .3s $CubicEaseInOut;
+				}
+
+				&:after {
+					opacity: 0;
+					background-color: #000;
+				}
+			}
+		}
+	}
+
+	nav {
+		position: fixed;
+		top: 0;
+		right: 0;
+		z-index: 999;
+		background-color: #00aeef;
+		background: linear-gradient(110deg, #eaedf6 0%,#fff 100%);
+		width: 260px;
+		height: 100%;
+		transform: translateX(270px);
+		transition: transform .7s $CubicEaseInOut;
+		border-left: #dedede solid 2px;
+
+		@include XGA {
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: auto;
+			transform: translateX(0);
+			background: none;
+			height: 60px;
+			margin-top: 20px;
+			border-left: none;
+
+			ul {
+				display: flex;
+			}
+		}
+
+		@include HD {
+			margin-top: 11px;
+		}
+
+		@include UXGA {
+			margin-top: 20px;
+		}
+
+		@include FHD {
+			margin-top: 20px;
+		}
+
+		&.open {
+			transform: translateX(0);
+		}
+
+		ul {
+			position: absolute;
+			left: calc( 50% - 55px );
+			top: calc( 50% - 80px );
+			text-align: center;
+
+			@include XGA {
+				right: 0;
+				top: 0;
+				left: auto;
+			}
+
+			li {
+				&:last-child {
+					a {
+						margin-right: 0;
+						padding-right: 0;
+					}
+				}
+			}
+		}
+		
+		.nav-item {
+			position: relative;
+			display: block;
+			color: #000;
+			font-size: 12px;
+			font-weight: 400;
+			text-decoration: none;
+			line-height: 1;
+			padding: 10px 0;
+			transition: all .3s $CubicEaseInOut;
+			opacity: 0.75;
+			white-space: nowrap;
+
+			&:after {
+				content: "";
+				position: absolute;
+				bottom: -2px;
+				left: 0;
+				width: 100%;
+				height: 2px;
+				background-color: #9bd5f5;
+				transition: transform .2s $QuadEaseInOut;
+				transform: scaleX(0);
+			}
+
+			&.active, &:hover {
+				opacity: 1;
+				
+				&:after {
+					transform: scaleX(1);
+				}
+			}
+
+			@include XGA {
+				color: #7d8790;
+				font-size: 13px;
+				padding: 5px 0px;
+				margin: 0 14px;
+
+				&.contest {
+					background-color: #d9198d;
+					padding: 5px 0px;
+					border-radius: 9px;
+					color: #fff;
+				}
+			}
+
+			@include HD {
+				font-size: 14px;
+				margin: 9px 16px;
+			}
+
+			@include UXGA {
+				font-size: 16px;
+				margin: 10px 20px;
+			}
+
+			@include FHD {
+				margin: 5px 30px;
+			}
+		}
+	}
+}

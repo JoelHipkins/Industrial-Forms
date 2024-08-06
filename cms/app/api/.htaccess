@@ -1,0 +1,17 @@
+RewriteEngine On  
+DirectoryIndex app.php
+Options -Indexes
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ app.php [QSA,L]
+
+<Files *.html>
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files app.php>
+    Order Allow,Deny
+    Allow from all
+</Files>

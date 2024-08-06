@@ -1,0 +1,82 @@
+.page-enter {
+  opacity: 0;
+  transform: translateY(-40px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s $QuadEaseOut, transform 0.4s $QuadEaseOut;
+  transition-delay: 0.4s;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.4s $QuadEaseOut, transform 0.4s $QuadEaseOut;
+}
+
+.items-enter {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+
+.items-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.4s $QuadEaseOut, transform 0.4s $QuadEaseOut;
+  transition-delay: 0.4s;
+}
+
+.items-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.items-exit-active {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  transform: translateX(40px);
+  transition: opacity 0.4s $QuadEaseOut, transform 0.4s $QuadEaseOut;
+}
+
+.images-enter {
+  opacity: 0;
+}
+
+.images-enter-active {
+  opacity: 1;
+  transition: opacity 0.4s $QuadEaseOut, transform 0.4s $QuadEaseOut;
+  transition-delay: 0.4s;
+}
+
+.images-exit {
+  opacity: 1;
+}
+
+.images-exit-active {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  transition: opacity 0.4s $QuadEaseOut, transform 0.4s $QuadEaseOut;
+}
+
+@keyframes spin{
+  0% {
+    transform: rotate(0deg);  
+  }
+
+  100% {
+    transform: rotate(360deg); 
+  }
+}

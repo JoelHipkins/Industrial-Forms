@@ -1,0 +1,400 @@
+.ReactModal__Body--open {
+    overflow: hidden;
+}
+
+.ReactModalPortal > * {
+    opacity: 0;
+}
+
+.overlay {
+    z-index: 2000;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	padding: 40px;
+	transition: opacity 1000ms $CubicEaseInOut;
+    background: transparent;
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #43494f;
+        opacity: 0.85;
+    }
+
+    &_after-open {
+        opacity: 1;
+    }
+    &_before-close {
+        opacity: 0;
+    }
+}
+
+.close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ef8049;
+    cursor: pointer;
+
+    @include vHD {
+        right: -10px;
+        top: -40px;
+    }
+
+    @include XGA {
+        right: -50px;
+        top: -50px;
+        width: 40px;
+        height: 40px;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: 8px;
+        top: 14px;
+        width: 14px;
+        height: 3px;
+        background-color: #fff;
+        transform: rotate(45deg);
+
+        @include XGA {
+            top: 19px;
+            left: 13px;
+        }
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        left: 8px;
+        top: 14px;
+        width: 14px;
+        height: 3px;
+        background-color: #fff;
+        transform: rotate(-45deg);
+
+        @include XGA {
+            top: 19px;
+            left: 13px;
+        }
+    }
+
+    span {
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 400;
+        position: absolute;
+        top: 6px;
+        left: -54px;
+        font-size: 14px;
+
+        @include XGA {
+            top: 12px;
+        }
+    }
+}
+
+.modal {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -40%);
+	transition: transform 300ms $CubicEaseInOut .2s, opacity 300ms $CubicEaseInOut;
+    background: #39393b;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 1000px;
+    padding: 60px 50px;
+    outline: none;
+    border: none;
+
+    .popup-inner {
+        max-height: 60vh;
+        overflow-y: auto;
+
+        &.model {
+            max-height: 60vh;
+            height: 60vh;
+            overflow-y: initial;
+
+            .model-holder {
+                position: relative;
+                height: 100%;
+
+                @include XGA {
+                    display: flex;
+                    flex-flow: row;
+                    flex-wrap: nowrap;
+                }
+
+                .model-header {
+                    position: absolute;
+                    left: -20px;
+                    top: -20px;
+                    background-color: #9bd5f5;
+                    color: #fff;
+                    text-align: center;
+                    border-radius: 5px;
+                    margin: 0;
+                    padding: 10px 20px;
+                    border: #fff solid 2px;
+                }
+            }
+
+            .model-scene {
+                background-color: #ebeef6;
+                border-radius: 10px;
+                border: #9bd5f5 solid 3px;
+                height: 100%;
+
+                @include XGA {
+                    width: 100%;
+                }
+            }
+
+            .model-tools {
+                display: block;
+
+                @include XGA {
+                    margin-left: 20px;
+                    width: 280px;
+                }
+
+                .box {
+                    background-color: #ebeef6;
+                    border-radius: 10px;
+                    border: #9bd5f5 solid 3px;
+                    padding: 20px;
+                    margin-bottom: 10px;
+
+                    &.options {
+                        display: none;
+
+                        @include XGA {
+                            display: block;
+                        }
+                    }
+
+                    h4 {
+                        margin-top: 0;
+                        color: #9bd5f5;
+                    }
+
+                    p {
+                        margin: 0;
+                        margin-bottom: 5px;
+                        color: #39393b;
+                    }
+
+                    .snap {
+                        color: #9bd5f5;
+                        cursor: pointer;
+                        margin-top: 20px;
+                    }
+
+                    .model-color-picker {
+                        position: relative;
+                        top: -3px;
+                        display: inline-block;
+                        margin-left: 20px;
+                    }
+
+                    .model-color-selector {
+                        display: flex;
+
+                        .color {
+                          width: 36px;
+                          height: 14px;
+                          border-radius: 2px;
+                        }
+
+                        .swatch {
+                          padding: 5px;
+                          background: #fff;
+                          border-radius: 1px;
+                          box-shadow: 0 0 0 1px rgba(0, 0, 0, .1);
+                          display: inline-block;
+                          cursor: pointer;
+                        }
+
+                        .popover {
+                          position: absolute;
+                          z-index: 2;
+                        }
+
+                        .cover {
+                          position: fixed;
+                          top: 0px;
+                          right: 0px;
+                          bottom: 0px;
+                          left: 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &_after-open {
+    	opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+    &_before-close {
+    	opacity: 0;
+        transform: translate(-50%, -40%);
+        transition-delay: 0s;
+    }
+
+    .big {
+        max-height: calc( 100vh - 240px );
+    }
+
+    .gallery {
+        text-align: center;
+        overflow-y: hidden;
+        height: 90vh;
+        max-height: 60vh;
+
+        img {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            display: inline-block;
+            max-width: 100%;
+            max-height: 100%;
+            user-select: none;
+        }
+
+        .prev, .next {
+            position: absolute;
+            left: 10px;
+            top: calc( 50% - 15px );
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #ef8049;
+            cursor: pointer;
+            z-index: 100;
+
+            @include XGA {
+                left: 20px;
+                width: 40px;
+                height: 40px;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: 10px;
+                top: 8px;
+                width: 10px;
+                height: 10px;
+                border-left: #fff solid 3px;
+                border-bottom: #fff solid 3px;
+                transform: rotate(45deg);
+
+                @include XGA {
+                    left: 15px;
+                    top: 13px;
+                }
+            }
+        }
+
+        .next {
+            left: auto;
+            right: 10px;
+
+            &:before {
+                left: 7px;
+                transform: rotate(-135deg);
+
+                @include XGA {
+                    left: 11px;
+                }
+            }
+
+            @include XGA {
+                right: 20px;
+            }
+        }
+    }
+
+    .player {
+        width: 300px;
+        height: 169px;
+
+        video {
+            border: #000 solid 1px;
+        }
+
+        @include vHD {
+            width: 600px;
+            height: 339px;
+        }
+
+        @include UXGA {
+            width: 900px;
+            height: 509px;
+        }
+    }
+
+    h1, h2, h3, h4 {
+        margin: 20px 0;
+        color: #fff;
+    }
+
+    p, li {
+        color: #abb9c6;
+    }
+
+    .btn-holder {
+        text-align: center;
+
+        .btn {
+            margin-top: 20px;
+        }
+    }
+
+    .list {
+        margin: 20px 0 40px;
+        margin-bottom: 0;
+
+        li {
+            position: relative;
+            padding-left: 40px;
+            margin: 10px 0;
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 2px;
+                width: 14px;
+                height: 14px;
+                border-radius: 50%;
+                border: #67a8cd solid 2px;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                left: 8px;
+                top: 10px;
+                width: 18px;
+                height: 2px;
+                background-color: #67a8cd;
+            }
+        }
+    }
+}

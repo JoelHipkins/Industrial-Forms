@@ -1,0 +1,112 @@
+.additive-production {
+
+	@include UXGA {
+		padding-top: 120px;
+	}
+
+	@include FHD {
+		padding-top: 160px;
+	}
+
+	.desc {
+		max-width: 750px;
+
+		@include FHD {
+			max-width: 800px;
+		}
+	}
+
+	.email {
+		@include HD {
+			margin-top: 40px;
+		}
+	}
+
+	.images {
+		margin-bottom: 40px;
+
+		@include XGA {
+			width: 40%;
+			margin-left: 60%;
+			margin-top: -400px;
+		}
+
+		@include HD {
+			margin-top: -480px;
+		}
+
+		img {
+			margin-bottom: 20px;
+		}
+	}
+
+	.adv {
+		@include XGA {
+			position: relative;
+			width: 47%;
+			height: 200px;
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-image: url("/assets/img/adv-border.png");
+			margin-top: 60px;
+
+			h4 {
+				margin: 0;
+				position: absolute;
+				left: 40%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+
+		@include HD {
+			margin-top: 90px;
+		}
+	}
+
+	.list {
+		margin: 40px 0;
+
+		@include HD {
+			display: flex;
+			flex-flow: row;
+			flex-wrap: nowrap;
+			width: 47%;
+		}
+
+		li {
+			position: relative;
+			padding-left: 40px;
+			color: #7d8790;
+			margin: 10px 0;
+
+			@include HD {
+				min-width: 25%;
+				max-width: 25%;
+				width: 25%;
+			}
+
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 2px;
+				width: 14px;
+				height: 14px;
+				border-radius: 50%;
+				border: #67a8cd solid 2px;
+			}
+
+			&:after {
+				content: "";
+				position: absolute;
+				left: 8px;
+				top: 10px;
+				width: 18px;
+				height: 2px;
+				background-color: #67a8cd;
+			}
+		}
+	}
+}

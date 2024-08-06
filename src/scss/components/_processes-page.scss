@@ -1,0 +1,164 @@
+.processes {
+
+	@include UXGA {
+		padding-top: 120px;
+	}
+
+	@include FHD {
+		padding-top: 140px;
+	}
+
+	.desc {
+		margin-bottom: 40px;
+
+		@include UXGA {
+			margin-bottom: 60px;
+		}
+	}
+
+	.products {
+		.btn {
+			margin-top: 20px;
+		}
+
+		.image {
+			text-align: center;
+			margin: 30px 0;
+
+			img {
+				position: relative;
+				display: inline-block;
+
+				@include vHD {
+					max-width: 50%;
+					max-height: 300px;
+				}
+
+				@include XGA {
+					max-width: 90%;
+					max-height: 90%;
+				}
+			}
+		}
+
+		li {
+			position: relative;
+			padding: 30px 0;
+
+			h2 {
+				margin-top: 0;
+			}
+
+			&:nth-child(3n + 1) {
+				background-color: #f6f8fb;
+			}
+
+			&:nth-child(3n + 2) {
+				background-color: #147ec9;
+
+				h1, h2, h3, h4, h5, p {
+					color: #fff;
+				}
+
+				.btn {
+					color: #fff;
+					border-color: #fff;
+
+					&:before {
+						background-color: #fff;
+					}
+
+					&:after {
+						background-color: #fff;
+					}
+
+					&:hover {
+						background-color: rgba(0, 0, 0, 0.4);
+					}
+				}
+			}
+
+			&:nth-child(3n + 3) {
+				background-color: #fff;
+			}
+
+			&:nth-child(odd) {
+				.text {
+					@include XGA {
+						width: 45%;
+						margin-left: 50%;
+						padding: 80px 0;
+					}
+				}
+
+				.image {
+					position: relative;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					margin: 0;
+					margin-top: 40px;
+
+					@include XGA {
+						margin-top: 0;
+						width: 48%;
+						position: absolute;
+					}
+
+					img {
+						max-width: 50%;
+						display: inline-block;
+
+						@include XGA {
+							position: absolute;
+							left: 50%;
+							top: 50%;
+							transform: translate(-50%, -50%);
+							max-width: 100%;
+						}
+					}
+				}
+			}
+
+			&:nth-child(even) {
+				.text {
+					@include XGA {
+						width: 45%;
+						margin-left: 0;
+						padding: 80px 0;
+					}
+				}
+
+				.image {
+					position: relative;
+					right: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					margin: 0;
+					margin-top: 40px;
+
+					@include XGA {
+						margin-top: 0;
+						width: 50%;
+						position: absolute;
+					}
+
+					img {
+						max-width: 50%;
+						display: inline-block;
+
+						@include XGA {
+							position: absolute;
+							left: 50%;
+							top: 50%;
+							transform: translate(-50%, -50%);
+							max-width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+}

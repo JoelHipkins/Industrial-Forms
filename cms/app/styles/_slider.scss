@@ -1,0 +1,144 @@
+.slider {
+
+	h2 {
+		margin: 0;
+		padding-top: 30px;
+		margin-left: 30px;
+		line-height: 1;
+	}
+
+	input {
+		text-align: left;
+		margin: 0;
+		margin-top: 0;
+		margin-bottom: 10px;
+		background-color: #fff;
+	}
+
+	input[type=number] {
+		max-width: 70px;
+		display: inline-block;
+	}
+
+	button {
+		width: 150px;
+		margin: 0;
+		margin-top: 20px;
+	}
+
+	textarea {
+		display: block;
+		width: 100%;
+		min-height: 60px;
+		border: $darkblue solid 1px;
+		margin-bottom: 10px;
+	}
+
+	.slider-container {
+		position: relative;
+		margin-left: 30px;
+		width: calc( 100% - 60px );
+	}
+
+	.delete, .add, .edit {
+		position: absolute;
+		right: 30px;
+		bottom: -10px;
+	}
+
+	.save {
+		position: absolute;
+		right: 210px;
+		bottom: -10px;
+	}
+
+	.price-holder, .new {
+		width: 100%;
+
+		li {
+			position: relative;
+			width: 100%;
+			padding: 20px;
+			padding-top: 40px;
+			background-color: $lightblue;
+			border: $darkblue solid 1px;
+			margin-bottom: 20px;
+			text-align: left;
+
+			.id {
+				position: absolute;
+				top: 5px;
+				right: 5px;
+				color: #666;
+			}
+
+			img {
+				max-width: 30%;
+			}
+
+			.order {
+				position: absolute;
+				left: 0;
+				top: 0;
+				padding-left: 15px;
+				border-right: $darkblue solid 1px;
+				border-bottom: $darkblue solid 1px;
+
+				.up {
+					position: relative;
+					display: inline-block;
+					width: 30px;
+					height: 30px;
+					cursor: pointer;
+					margin-right: 15px;
+
+					&:after {
+						content: "";
+						position: absolute;
+						top: 10px;
+						left: 5px;
+						width: 20px;
+						height: 20px;
+						border-top: #000 solid 2px;
+						border-left: #000 solid 2px;
+						transform: rotate(45deg);
+					}
+				}
+
+				.down {
+					position: relative;
+					display: inline-block;
+					width: 30px;
+					height: 30px;
+					cursor: pointer;
+					margin-right: 15px;
+
+					&:after {
+						content: "";
+						position: absolute;
+						top: -3px;
+						left: 5px;
+						width: 20px;
+						height: 20px;
+						border-top: #000 solid 2px;
+						border-left: #000 solid 2px;
+						transform: rotate(-135deg);
+					}
+				}
+			}
+		}
+	}
+
+	.new {
+		display: none;
+
+		li {
+			background-color: #aaa;
+			color: #fff;
+		}
+
+		&.open {
+			display: block;
+		}
+	}
+}

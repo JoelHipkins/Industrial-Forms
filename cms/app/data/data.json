@@ -1,0 +1,32 @@
+{	
+	"config": {
+		"logo": "images/logo.png"
+	},
+    "nav": [
+    	{
+            "name": "Home",
+            "icon": "images/icons/home.svg",
+            "url": "/home"
+        },
+        {
+            "name": "Products",
+            "icon": "images/icons/offer.svg",
+            "url": "/products"
+        },
+        {
+            "name": "Portfolio - categories",
+            "icon": "images/icons/gallery.svg",
+            "url": "/categories"
+        },
+        {
+            "name": "Portfolio",
+            "icon": "images/icons/gallery.svg",
+            "url": "/portfolio"
+        },
+    	{
+    		"name": "Settings",
+            "icon": "images/icons/settings-white.svg",
+    		"url": "/settings"
+    	}
+    ]
+}

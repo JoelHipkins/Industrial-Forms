@@ -1,0 +1,28 @@
+.page-enter {
+	opacity: 0;
+}
+
+.page-enter.page-enter-active {
+  opacity: 1;
+  transition: opacity 0.4s $QuadEaseOut .1s;
+  transition-delay: .5s;
+}
+
+.page-leave {
+	opacity: 1;
+}
+
+.page-leave.page-leave-active {
+  opacity: 0;
+  transition: opacity 0.4s $QuadEaseOut .1s;
+}
+
+@keyframes spin{
+  0% {
+    transform: rotate(0deg);  
+  }
+
+  100% {
+    transform: rotate(360deg); 
+  }
+}

@@ -1,0 +1,161 @@
+aside {
+	position: fixed;
+	left: 0;
+	top: 50px;
+	width: 250px;
+	height: calc( 100% - 50px );
+	background-color: #222d32;
+	padding: 10px;
+	z-index: 1010;
+	transform: translateX(-250px);
+	transition: transform .3s $CubicEaseInOut;
+
+	&.open {
+		transform: translateX(0);
+	}
+
+	@include md-h {
+		transform: translateX(0);
+	}
+
+	#burger {
+		position: absolute;
+		top: -45px;
+		right: -50px;
+		width: 40px;
+		height: 40px;
+		background-color: transparent;
+		cursor: pointer;
+		transition: transform .3s $CubicEaseInOut;
+
+		.in {
+			position: relative;
+			margin-left: 10px;
+			margin-top: 10px;
+			width: 20px;
+			height: 16px;
+			border-top: #000 solid 4px;
+
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 4px;
+				width: 100%;
+				height: 4px;
+				background-color: #000;
+			}
+
+			&:after {
+				content: "";
+				position: absolute;
+				right: 0;
+				top: 12px;
+				width: 100%;
+				height: 4px;
+				background-color: #000;
+			}
+		}
+
+		&.open {
+			transform: translateX(-50px);
+
+			.in {
+				border-top: none;
+
+				&:before {
+					transform: rotate(45deg);
+					top: 8px;
+				}
+
+				&:after {
+					transform: rotate(-45deg);
+					top: 8px;
+				}
+			}
+		}
+
+		@include md-h {
+			display: none;
+		}
+	}
+
+	nav {
+		ul {
+			li {
+				padding: 10px 0;
+				border-bottom: $blue solid 1px;
+				
+				&:last-child {
+					border-bottom: none;
+				}
+			}
+
+			.nav-item {
+				display: flex;
+				position: relative;
+				color: #fff;
+				text-decoration: none;
+				padding-left: 27px;
+				padding-right: 20px;
+				height: 25px;
+				opacity: 0.5;
+				transition: opacity .2s $CubicEaseInOut, transform .2s $CubicEaseInOut;
+
+				&:hover {
+					opacity: 1;
+					transform: translateX(-5px);
+				}
+
+				&.active {
+					opacity: 1;
+				}
+
+				img {
+					height: 100%;
+					margin-right: 10px;
+					fill: #fff;
+				}
+
+				span {
+					margin-top: 3px;
+					font-size: 14px;
+					white-space: nowrap;
+				}
+			}
+		}
+	}
+
+	.support-holder {
+		position: absolute;
+		bottom: 0;
+		width: calc( 100% - 20px );
+		padding: 10px 0;
+		border-top: $blue solid 1px;
+	}
+
+	.support {
+		display: flex;
+		color: #fff;
+		text-decoration: none;
+		padding-left: 37px;
+		height: 30px;
+		opacity: 0.5;
+		transition: opacity .2s $CubicEaseInOut, transform .2s $CubicEaseInOut;
+
+		&:hover {
+			opacity: 1;
+			transform: translateX(-5px);
+		}
+
+		img {
+			height: 100%;
+			margin-right: 10px;
+			fill: #fff;
+		}
+
+		span {
+			margin-top: 5px;
+		}
+	}
+}

@@ -1,0 +1,310 @@
+// ------------------------------------------------
+// Site Name: 
+// Author: 
+// ------------------------------------------------
+
+* {
+	box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+}
+
+body {
+  font-family: $main;
+}
+
+section {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding-top: 61px;
+
+  @include HD {
+    padding-top: 75px;
+  }
+
+  @include UXGA {
+    padding-top: 96px;
+  }
+
+  @include FHD {
+    padding-top: 120px;
+  }
+}
+
+img {
+  display: block;
+  border: none;
+  max-width: 100%;
+}
+
+.container {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @include XGA {
+    width: 80%;
+  }
+}
+
+.container-big {
+  position: relative;
+  width: 90%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  
+  li {
+    list-style: none;
+    color: #7d8790;
+  }
+}
+
+p {
+  color: #7d8790;
+  font-size: 14px;
+  line-height: 1.3;
+
+  @include UXGA {
+    font-size: 15px;
+  }
+
+  @include FHD {
+    font-size: 16px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #545a5e;
+  text-transform: uppercase;
+
+  span {
+    color: #9bd5f5;
+  }
+}
+
+h1 {
+  @include HD {
+    font-size: 40px;
+  }
+
+  @include UXGA {
+    font-size: 48px;
+  }
+}
+
+h2 {
+  @include HD {
+    font-size: 34px;
+  }
+
+  @include UXGA {
+    font-size: 48px;
+  }
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  border-top: #7d8790 solid 2px;
+  border-bottom: #7d8790 solid 2px;
+  padding: 18px 40px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #7d8790;
+  cursor: pointer;
+  transition: background-color .2s $CubicEaseInOut;
+  user-select: none;
+  outline: none;
+  text-decoration: none;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 2px;
+    height: 70%;
+    background-color: #7d8790;
+    transition: height .2s $CubicEaseInOut;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2px;
+    height: 70%;
+    background-color: #7d8790;
+    transition: height .2s $CubicEaseInOut;
+  }
+
+  @include UXGA {
+    font-size: 15px;
+  }
+
+  @include FHD {
+    font-size: 16px;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+
+    &:before {
+      height: 100%;
+    }
+
+    &:after {
+      height: 100%;
+    }
+  }
+
+  &.white {
+    color: #fff;
+    border-top: #fff solid 2px;
+    border-bottom: #fff solid 2px;
+
+    &:before {
+      background-color:#fff;
+    }
+
+    &:after {
+      background-color:#fff;
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+.cookies {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    margin-left: 10%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 30px 10%;
+    z-index: 1000;
+    color: #fff;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .4s ease;
+
+    &.show {
+
+        visibility: visible;
+        opacity: 1;
+        bottom: 50px;
+    }
+
+    a {
+      display: inline-block;
+        color: #fff;
+        font-weight: 700;
+        margin-top: 10px;
+    }
+
+    h3 {
+      margin-top: 0;
+    }
+
+    .close {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+
+      &:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 50%;
+          width: 100%;
+          height: 2px;
+          background-color: #fff;
+          transform: rotate(45deg);
+      }
+
+      &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 50%;
+          width: 100%;
+          height: 2px;
+          background-color: #fff;
+          transform: rotate(-45deg);
+      }
+  }
+}
+
+.parsley-errors-list {
+  display: none;
+}
+
+.parsley-error {
+  border-color: #f00 !important;
+}
+
+::-webkit-scrollbar {
+  @include HD {
+	 width: 10px;
+  }
+}
+
+::-webkit-scrollbar-button {
+  @include HD {
+    display: none;
+  }
+}
+
+::-webkit-scrollbar-track {
+  @include HD {
+    position: relative;
+    background-color: #cfcfcf;
+    border-radius: 5px;
+  }
+}
+
+::-webkit-scrollbar-track-piece {
+  @include HD {
+    background-color: #cfcfcf;
+  }
+}
+
+::-webkit-scrollbar-thumb {
+  @include HD {
+    background-color: #9bd5f5;
+  }
+}
+
+::-webkit-scrollbar-corner {
+
+}
+
+::-webkit-resizer {
+
+}

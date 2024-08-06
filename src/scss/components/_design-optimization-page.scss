@@ -1,0 +1,110 @@
+.design-optimization {
+
+	@include UXGA {
+		padding-top: 120px;
+	}
+
+	@include FHD {
+		padding-top: 160px;
+	}
+
+	.content {
+		margin-top: 40px;
+
+		@include XGA {
+			width: 47%;
+		}
+
+		@include HD {
+			width: 44%;
+			margin-bottom: 60px;
+		}
+	}
+
+	.desc {
+		max-width: 750px;
+
+		@include FHD {
+			max-width: 800px;
+		}
+	}
+
+	.image {
+		position: relative;
+		width: 100%;
+		margin-top: 80px;
+		height: 120px;
+		border-left: #bbe2f9 solid 3px;
+		border-top: #bbe2f9 solid 3px;
+		border-right: #bbe2f9 solid 3px;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		text-align: center;
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: -3px;
+			left: 10%;
+			width: 80%;
+			height: 3px;
+			background-color: #bbe2f9;
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			right: -3px;
+			top: 10%;
+			height: 90%;
+			width: 3px;
+			background-color: #bbe2f9;
+		}
+
+		@include vHD {
+			height: 180px;
+		}
+
+		@include XGA {
+			width: 40%;
+			margin-left: 60%;
+			margin-top: -340px;
+			height: 360px;
+		}
+
+		@include HD {
+			height: 440px;
+		}
+
+		@include UXGA {
+			height: 480px;
+			margin-top: -370px;
+		}
+
+		@include FHD {
+			height: 500px;
+			margin-top: -390px;
+		}
+
+		img {
+			max-width: 220px;
+			display: inline-block;
+			margin-top: -60px;
+
+			@include vHD {
+				margin-top: -60px;
+				max-width: 300px;
+			}
+
+			@include XGA {
+				max-width: 150%;
+				margin-top: -35px;
+				margin-left: -21%;
+			}
+
+			@include HD {
+				
+			}
+		}
+	}
+}

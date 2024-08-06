@@ -1,0 +1,159 @@
+.home {
+	position: relative;
+	text-align: center;
+
+	@include md {
+		text-align: left;
+	}
+
+	.date {
+		display: inline-block;
+		position: relative;
+		margin-top: 30px;
+		margin-left: 0;
+		font-weight: 700;
+
+		.today {
+			padding-bottom: 16px;
+			font-size: 24px;
+			border-bottom: #000 solid 1px;
+		}
+
+		.time {
+			font-size: 80px;
+		}
+
+		@include md {
+			position: absolute;
+			top: 0;
+			right: 0;
+			margin-right: 30px;
+			margin-left: 30px;
+		}
+	}
+
+	.welcome {
+		position: relative;
+		margin-left: 0;
+		padding-top: 30px;
+		font-size: 18px;
+		font-weight: 700;
+
+		span {
+			font-size: 24px;
+		}
+
+		@include md {
+			position: absolute;
+			margin-left: 30px;
+		}
+	}
+
+	.todos {
+		display: block;
+		text-align: center;
+
+		h2 {
+			@include md {
+				text-align: left;
+			}
+		}
+
+		@include md {
+			display: inline-block;
+			margin-left: 30px;
+			margin-top: 140px;
+			width: 400px;
+		}
+
+		ul {
+			display: inline-block;
+			width: 100%;
+			max-width: 400px;
+		}
+
+		li {
+			position: relative;
+			display: flex;
+			padding: 10px;
+
+			&:nth-child(even) {
+				background-color: #fff;
+			}
+
+			&:nth-child(odd) {
+				background-color: #eee;
+			}
+
+			span {
+				padding: 10px;
+			}
+
+			.todo-id {
+				width: 40px;
+			}
+
+			.todo-text {
+				min-width: calc( 100% - 80px );
+				max-width: calc( 100% - 80px );
+			}
+			
+			input {
+				display: inline-block;
+				margin: 0;
+				margin-right: 0;
+				width: calc( 100% - 40px; );
+			}
+
+			.add {
+				display: inline-block;
+				position: relative;
+				width: 40px;
+				height: 41px;
+				cursor: pointer;
+				border: $darkblue dashed 1px;
+				border-left: none;
+
+				&:before {
+					content: "";
+					position: absolute;
+					left: 5px;
+					top: 18px;
+					width: 30px;
+					height: 4px;
+					background-color: $darkblue;
+				}
+
+				&:after {
+					content: "";
+					position: absolute;
+					left: 18px;
+					top: 5px;
+					width: 4px;
+					height: 30px;
+					background-color: $darkblue;
+				}
+			}
+
+			.remove {
+				display: inline-block;
+				position: relative;
+				flex: 1;
+				width: 40px;
+				max-width: 40px;
+				height: 41px;
+				cursor: pointer;
+
+				&:before {
+					content: "";
+					position: absolute;
+					left: 5px;
+					top: 18px;
+					width: 30px;
+					height: 4px;
+					background-color: $darkblue;
+				}
+			}
+		}
+	}
+}

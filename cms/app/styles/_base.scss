@@ -1,0 +1,374 @@
+// ------------------------------------------------
+// Site Name: New Better CMS
+// Author: Jakub Strączyński
+// ------------------------------------------------
+
+html, body, #app {
+	min-height: 100%;
+	height: 100vh;
+	background-color: $blue;
+	position: relative;
+	font-family: $normal;
+}
+
+.app-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.page-holder {
+	padding-top: 50px;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+
+	@include md-h {
+		padding-left: 250px;
+	}
+}
+
+.logo-container {
+	position: relative;
+	width: 250px;
+}
+
+.logo {
+	display: none;
+	margin-top: 5px;
+	max-height: 40px;
+
+	@include md-h {
+		display: block;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+.confirm {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	background-color: $blue;
+	border: $darkblue solid 1px;
+	text-align: center;
+	padding: 30px;
+	z-index: 1020;
+
+	@include md-h {
+		margin-left: 250px;
+	}
+
+	button {
+		display: inline-block;
+		margin: 5px !important;
+	}
+}
+
+.cover {
+	position: fixed;
+	z-index: 3;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+section {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+}
+
+input {
+	display: block;
+	padding: 10px 5px;
+	margin-top: 25px;
+	margin-left: 5%;
+	width: 90%;
+	text-align: center;
+	border: none;
+	background-color: #eee;
+	border: $darkblue solid 1px;
+	outline: none;
+
+	&.parsley-error {
+		border: red solid 1px;
+	}
+}
+
+button {
+	position: relative;
+	display: block;
+	margin-left: 5%;
+	width: 90%;
+	padding: 5px;
+	padding-bottom: 10px;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	background-color: #eee;
+	color: $darkblue;
+	border: $darkblue solid 1px;
+	transition: color .3s $CubicEaseInOut, background-color .3s $CubicEaseInOut;
+	outline: none;
+
+	&:hover {
+		background-color: $darkblue;
+		color: #eee;
+	}
+
+	&.add-top {
+		padding-left: 30px;
+	}
+}
+
+.notification {
+	position: fixed;
+	top: 80px;
+	right: 30px;
+	padding: 25px;
+	padding-bottom: 15px;
+	z-index: 1001;
+	cursor: pointer;
+	max-width: 260px;
+	font-size: 18px;
+
+	.close {
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		font-size: 9px;
+	}
+
+	&.error {
+		color: #a94442;
+    	background-color: #f2dede;
+    	border-color: #ebccd1;
+	}
+
+	&.success {
+		color: #3c763d;
+    	background-color: #dff0d8;
+    	border-color: #d6e9c6;
+	}
+
+	&.info {
+		color: #31708f;
+    	background-color: #d9edf7;
+    	border-color: #bce8f1;
+	}
+}
+
+.popup {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	background-color: rgba(0, 0, 0, 0.8);
+	overflow: auto;
+	padding: 30px;
+
+	@include md-h {
+		position: fixed;
+		left: 250px;
+		width: calc( 100% - 250px );
+	}
+	
+	.popup-inner {
+		text-align: center;
+		position: relative;
+		padding-top: 40px;
+		margin-top: 40px;
+
+		h2 {
+			position: absolute;
+			left: 0;
+			top: 0;
+			color: #fff;
+			margin: 0;
+			padding: 0;
+		}
+
+		.close {
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 40px;
+			height: 40px;
+			cursor: pointer;
+
+			&:before {
+				content: "";
+				position: absolute;
+				left: 5px;
+				top: 13px;
+				width: 30px;
+				height: 3px;
+				background-color: #fff;
+				transform: rotate(45deg);
+			}
+
+			&:after {
+				content: "";
+				position: absolute;
+				left: 5px;
+				top: 13px;
+				width: 30px;
+				height: 3px;
+				background-color: #fff;
+				transform: rotate(-45deg);
+			}
+		}
+	}
+}
+
+.drop-image {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	.image {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+
+		.cover{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(255, 255, 255, 0.85);
+		}
+	}
+
+	span {
+		display: block;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		text-align: center;
+		z-index: 10;
+	}
+}
+
+.lang-switch {
+		position: absolute;
+		left: 60px;
+		top: 0;
+		margin-top: 5px;
+		z-index: 10;
+
+		a {
+			cursor: pointer;
+			margin-left: 15px;
+
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+
+.language {
+	display: none;
+}
+
+.pl {
+	display: block;
+}
+
+.search-input::before {
+  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAQJJREFUKBWVkr2uQUEUhf3ET6GRaC5aFRoJKrf1BKpb8SwqovYGXkCj00k0QnRKEYkILYobvpUYmeMMyVnJl7P3mjN7Zu9zwiGv2qRFyMMSRrAFp6JPN8XzBj+wgDkUYAg7WINTYdwpDECxrRLJHeq2accdkgm8bzTvNAg2EDOGeUYI1KNO1gkuzTA1g8T7ojbn4ONQWPuHPWgeHmnzCqoe15tkSNPgPEAn68oVcOmA2XMtGK9FoE/VhOTTVNExqLCGZnxCv2pYauEC6lF0oQxX6IOvb7yX9NPEQafan+aPXDdQC18LsO6Tip5BBY6gIQaSbnMCFRCBZRcIvFkbsvCr4AFGOCxQy+JdGQAAAABJRU5ErkJggg==');
+  display: block;
+  position: absolute;
+  width: 15px;
+  z-index: 3;
+  height: 15px;
+  font-size: 20px;
+  top: 6px;
+  left: 16px;
+  line-height: 32px;
+  opacity: 0.6;
+}
+
+.plus {
+	position: absolute;
+	left: 5px;
+	top: 50%;
+	transform: translateY(-50%);
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-color: #fff;
+	border-radius: 50%;
+	margin-right: 10px;
+
+	&:before {
+		content: "";
+		position: absolute;
+		left: 3px;
+		top: 8px;
+		width: 14px;
+		height: 4px;
+		background-color: #0a0b1a;
+		border-radius: 3px;
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		left: 8px;
+		top: 3px;
+		width: 4px;
+		height: 14px;
+		background-color: #0a0b1a;
+		border-radius: 3px;
+	}
+}
+
+.publish {
+	color: #000;
+   	background-color: #eee;
+   	border-color: #eee;
+}
+
+.content {
+	display: flex;
+
+	* {
+		flex: 1;
+	}
+
+	.image {
+		max-width: 120px;
+		min-width: 120px;
+
+		img {
+			max-width: 90%;
+			max-height: 90%;
+		}
+	}
+}
+
+.popup-inner {
+	.price-holder {
+		li {
+			background-color: #eaebf7 !important;
+			padding: 30px;
+		}
+	}
+}

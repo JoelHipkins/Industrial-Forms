@@ -1,0 +1,70 @@
+// ----------------------------
+//	TOOLS & UTILS
+// ----------------------------
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:    border-box;
+	box-sizing:         border-box;    
+}
+
+// ----------------------------
+//	COLORS
+// ----------------------------
+
+
+
+// ----------------------------
+//	EASING
+// ----------------------------
+
+$CubicEaseIn  	: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+$CubicEaseOut  	: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+$CubicEaseInOut : cubic-bezier(0.645, 0.045, 0.355, 1.000);
+$QuadEaseIn   	: cubic-bezier(0.550, 0.085, 0.680, 0.530);
+$QuadEaseOut  	: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+$QuadEaseInOut  : cubic-bezier(0.455, 0.030, 0.515, 0.955);
+$ExpoEaseOut  	: cubic-bezier(0.190, 1.000, 0.220, 1.000);
+$ExpoEaseInOut  : cubic-bezier(1.000, 0.000, 0.000, 1.000);
+
+
+// ----------------------------
+//	Break Points
+// ----------------------------
+
+$screen-vHD: 720px;
+$screen-XGA: 1020px;
+$screen-HD: 1270px;
+$screen-UXGA: 1590px;
+$screen-FHD: 1910px;
+
+
+@mixin vHD {
+    @media screen and (min-width: $screen-vHD) {
+        @content;
+    }
+}
+
+@mixin XGA {
+    @media screen and (min-width: $screen-XGA) {
+        @content;
+    }
+}
+
+@mixin HD {
+    @media screen and (min-width: $screen-HD) {
+        @content;
+    }
+}
+
+@mixin UXGA {
+    @media screen and (min-width: $screen-UXGA) {
+        @content;
+    }
+}
+
+@mixin FHD {
+    @media screen and (min-width: $screen-FHD) {
+        @content;
+    }
+}

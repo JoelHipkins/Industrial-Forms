@@ -1,0 +1,367 @@
+{
+	"nav": [
+		{
+			"name": "About us",
+			"route": "/about-us"
+		},
+		{
+			"name": "3D Print",
+			"route": "/3d-print"
+		},
+		{
+			"name": "Development",
+			"route": "/development"
+		},
+		{
+			"name": "Portfolio",
+			"route": "/portfolio"
+		},
+		{
+			"name": "Get quote",
+			"route": "/get-quote"
+		},
+		{
+			"name": "Contact",
+			"route": "/contact"
+		}
+	],
+	"social": [
+		{
+			"name": "Facebook",
+			"link": "",
+			"icon": "/assets/img/fb.png"
+		},
+		{
+			"name": "Instagram",
+			"link": "",
+			"icon": "/assets/img/insta.png"
+		},
+		{
+			"name": "Twitter",
+			"link": "",
+			"icon": "/assets/img/tw.png"
+		},
+		{
+			"name": "LinkedIn",
+			"link": "",
+			"icon": "/assets/img/in.png"
+		}
+	],
+	"error": {
+		"fourofour": "404",
+		"notFound": "Page not found",
+		"backToHome": "Back to home page"
+	},
+	"contact": {
+		"title": "Contact",
+		"metaDesc": "Engineers who can help develop your products using 3D Printing, cheaper and more accessible than ever before!",
+		"desc": "Engineers who can help develop your products using 3D Printing, cheaper and more accessible than ever before!",
+		"location": "Location",
+		"phone": "Telephone",
+		"contactData": "12 St Annes Lane,<br/>CW5 5EH Nantwich<br/>Cheshire",
+		"phoneNo": "+44 (0) 1270 621 758",
+		"emailAddress": "enquiries@industrialforms.co.uk",
+		"name": "Name",
+		"email": "E-mail",
+		"inquiry": "Your inquiry",
+		"send": "Send Inquiry",
+		"thankYou": "Thank You!",
+		"messageSend": "Your message was send.",
+		"error": "Error",
+		"sendError": "Something went wrong. Try again."
+	},
+	"getQuote": {
+		"metaTitle": "Get a quote",
+		"title": "Get a <span>quote</span>",
+		"metaDesc": "Engineers who can help develop your products using 3D Printing, cheaper and more accessible than ever before!",
+		"desc": "Engineers who can help develop your products using 3D Printing, cheaper and more accessible than ever before!",
+		"step1": "<span>Step 1.</span> Upload your files",
+		"step1tip": "please ensure file is in STL format and in high resolution<br/>- we recommended 0.005 export settings",
+		"addFile": "Upload files",
+		"newFile": "Add new file",
+		"maxSize": "Only *.STL files, maximum total files size - 25MB, maximum 10 files.",
+		"upload": "Upload",
+		"step2": "<span>Step 2.</span> Your requirements",
+		"step2tip": "Don’t worry if you not sure at this stage- what exactly you need. After your initial requirement we will designate a dedicated Engineer to call you and help specify future details.",
+		"step2details": "",
+		"step3": "<span>Step 3.</span> Your details",
+		"step3tip": "Please give us Your contact details. One of our engineers will be in touch shortly.",
+		"name": "Name",
+		"company": "Company",
+		"email": "E-mail",
+		"contact": "Contact",
+		"send": "Send inquiry"
+	},
+	
+	"home": {
+		"close": "Close",
+		"metaTitle": "Home page",
+		"title": "Home Page",
+		"metaDesc": "Engineers who can help develop your products using 3D Printing, cheaper and more accessible than ever before!",
+		"slider": [
+			{
+				"title": "3D Print Developments - process,part, <span>product.</span>",
+				"desc": "<p>We can make PARTS, ASSEMBLIES and PRODUCTS for your projects – using both Additive Manufacturing and Conventional Manufacturing processes – cheaper, quicker and more accessible than ever before!</p><p>We are primarily about implementing Additive Manufacturing / 3D-Printing into any industry, helping you benefit from this enabling technology.</p>",
+				"btnText": "Read more",
+				"link": "/about-us",
+				"image": "/assets/img/slider-image1.png"
+			},
+			{
+				"title": "3D Print Developments - process,part, <span>product.</span>",
+				"desc": "<p>We can make PARTS, ASSEMBLIES and PRODUCTS for your projects – using both Additive Manufacturing and Conventional Manufacturing processes – cheaper, quicker and more accessible than ever before!</p><p>We are primarily about implementing Additive Manufacturing / 3D-Printing into any industry, helping you benefit from this enabling technology.</p>",
+				"btnText": "Read more",
+				"link": "/about-us",
+				"image": "/assets/img/slider-image1.png"
+			},
+			{
+				"title": "3D Print Developments - process,part, <span>product.</span>",
+				"desc": "<p>We can make PARTS, ASSEMBLIES and PRODUCTS for your projects – using both Additive Manufacturing and Conventional Manufacturing processes – cheaper, quicker and more accessible than ever before!</p><p>We are primarily about implementing Additive Manufacturing / 3D-Printing into any industry, helping you benefit from this enabling technology.</p>",
+				"btnText": "Read more",
+				"link": "/about-us",
+				"image": "/assets/img/slider-image1.png"
+			}
+		],
+		"whoWeAre": {
+			"title": "Who we are?",
+			"sub": "We are a dynamic group of Engineers and Designers",
+			"desc": "Having served our time in Aerospace, Automotive, Marine, Medical and Consumer Products sectors. Easily approachable, we can work with you in many ways. We’ve worked with all types of companies and individuals that are MAKERS of THINGs, from artists and designers, technology start-ups, to established engineering organisations, universities, and have delivered to expectation.",
+			"btnText": "Get In touch",
+			"link": "/about-us"
+		},
+		"whatWeAreAbout": {
+			"title": "What we are about?",
+			"desc": "We are here to help you take advantage of the benefits of Additive Manufacturing In your process, part and product ! We are using our expertise in 3d printing technologies to help you with:",
+			"btnText": "Read more",
+			"items": [
+				{
+					"name": "Parts",
+					"icon": "/assets/img/home-icon-1.png"
+				},
+				{
+					"name": "Products",
+					"icon": "/assets/img/home-icon-2.png"
+				},
+				{
+					"name": "Processes",
+					"icon": "/assets/img/home-icon-3.png"
+				}
+			]
+		},
+		"threed": {
+			"title": "3D print",
+			"desc": "<p>3D Printing is much more assessable than before, but you might need the knowhow and equipment to benefit from it – essentially getting your products to market more effectively and efficiently than ever before. We are that ‘on-tap’ resource you can use at will. One of our unique speciality is an engineering design evaluation service conducted before printing.</p> <p>We are lean, to the point and have a track record of working with our clients, gaining their confidence in our ability to deliver on time, to budget with quality parts surpassing their expectations. We will make it possible to take your concepts, from CAD model, through to a physical prototype.</p>",
+			"desc2": "We are lean, to the point and have a track record of working with our clients giving them confidence in our ability to deliver on time, to budget with quality parts surpassing they expectations. We will make it possible to take you concept from idea, through CAD design, prototyping and initial production phases!",
+			"items": [
+				{
+					"title": "Materials",
+					"desc": "Check range of available materials which we have to offer",
+					"icon": "/assets/img/home-icon-materials.png",
+					"btnText": "Read more",
+					"link": "/3d-print/materials"
+				},
+				{
+					"title": "Processes",
+					"desc": "Check range of our processes, which we have to offer.",
+					"icon": "/assets/img/home-icon-processes.png",
+					"btnText": "Read more",
+					"link": "/3d-print/processes"
+				}
+			]
+		},
+
+		"dev": {
+			"title": "Development",
+			"sub": "Manufacturing Process Development",
+			"desc": "Concerned with the design and manufacturing life cycle, its ultimately the process and parts that make your product.",
+			"btnText": "Your needs",
+			"items": [
+				{
+					"title": "CAD design",
+					"desc": "Industrial forms offers premium CAD design servicer",
+					"icon": "/assets/img/icon-dev-1.png",
+					"btnText": "Read more",
+					"link": "/development/cad-design"
+				},
+				{
+					"title": "Design optimization",
+					"desc": "We can optimise your design to minimalize manufacturing costs and maximise functionality.",
+					"icon": "/assets/img/icon-dev-2.png",
+					"btnText": "Read more",
+					"link": "/development/design-optimization"
+				},
+				{
+					"title": "Additive production",
+					"desc": "On many project we can be the most cost effective in volume 1-1000 off!",
+					"icon": "/assets/img/icon-dev-3.png",
+					"btnText": "Read more",
+					"link": "/development/additive-production"
+				}
+			],
+			"sub2": "Development – managed design service",
+			"desc2": "Advice on product improvements and enhancements – managed projects. Increasingly we are working with designers who need help on technical matters such as:",
+			"list": [
+				"Preparation of their product for 3D-printing, ",
+				"Material selection for the intended purpose, ",
+				"Wall thicknesses, without compromising the design (form / aesthetics) indent or if it is a proving model altering it prior to mass production methods such as injection moulding.",
+				"Functional features such thread sizes and tolerances."
+			],
+			"nda": "With NDA’s in place, we can if required work with your CAD data, in consultation to effect necessary changes to expedite the process.",
+			"design": "The Design for 3D-Print process",
+			"add": [
+				"SLA",
+				"FDM",
+				"SLS",
+				"DLP",
+				"MJP"
+			]
+		},
+		"manProcess": {
+			"title": "Development of the Manufacturing process",
+			"desc": "Material  - which is best for your Product Concept?",
+			"items": [
+				{
+					"name": "Resin",
+					"icon": "/assets/img/resin.png"
+				},
+				{
+					"name": "Filament",
+					"icon": "/assets/img/filament.png"
+				}
+			]
+		},
+		"portfolio": {
+			"title": "Portfolio",
+			"btnText": "See all portfolio"
+		}
+	},
+	"development": {
+		"metaTitle": "Development",
+		"title": "Development",
+		"metaDesc": "Engineers who can help develop your products using 3D Printing, cheaper and more accessible than ever before!",
+		"desc": "We can work with you in many ways",
+		"btnText": "Read more",
+		"cad": "CAD design",
+		"design": "<small>Design</small><br/>optimization",
+		"production": "<small>Additive</small><br/>production",
+		"popupTitle": "We can work with you in many ways",
+		"popupDesc": "Industrial Forms offer a comprehensive product development service, from conceptual  work,  working prototypes and beyond into small to medium volume production runs. We use a variety of industry standard CAD tools, to create designs and drawings, all in collaboration with clients, often involving an iterative procedures. Our designers and engineers work on projects in these sectors:",
+		"popupList": [
+			"Aerospace - Tooling and Fixtures",
+			"Automotive - Components and Concept Development",
+			"Electronics / Opto-electronics - Enclosures, Snap-fit Shells, LED Light clusters, Emergency Gear / Alert and Beacon equipment, Environmental protection",
+			"Consumer Products – Sports Tech, Wearable Tech, Kitchen and Home products",
+			"Medical – Inserts and Tooling",
+			"Special Purpose Machinery – Bracketry, Fixtures, Machine elements",
+			"Art and Creative – Jewellery, Awards and Trophies, Sculptures, Concepts"
+		],
+		"close": "Close"
+	},
+	"threed": {
+		"metaTitle": "3d print",
+		"title": "3D <span>print</span>",
+		"metaDesc": "Engineers who can help develop your products using 3D Printing, cheaper and more accessible than ever before!",
+		"desc": "Engineers who can help develop your products using 3D Printing, cheaper and more accessible than ever before!",
+		"btnText": "Read more",
+		"materials": "Materials",
+		"materialsDesc": "Come and check our range of materials which we have to offer.",
+		"processes": "Processes",
+		"processesDesc": "Come and check our range of materials which we have to offer."
+	},
+	"instantQuote": {
+		"metaTitle": "Instant Quote",
+		"title": "Instant <span>Quote</span>",
+		"metaDesc": "to scroll on widget please move your cursor on widget area",
+		"desc": "to scroll on widget please move your cursor on widget area"
+	},
+	"portfolioPage": {
+		"metaTitle": "Portfolio",
+		"title": "Portfolio",
+		"metaDesc": "Engineers who can help develop your products using 3D Printing, cheaper and more accessible than ever before!",
+		"desc": "Engineers who can help develop your products using 3D Printing, cheaper and more accessible than ever before!"
+	},
+	"cadDesign": {
+		"metaTitle": "CAD design",
+		"title": "CAD design",
+		"metaDesc": "Engineers who can help develop your products using 3D Printing, cheaper and more accessible than ever before!",
+		"desc": "<p>Industrial Forms offer CAD services:</p><ul class='list'><li>concept generation,</li><li>surface and parametric solid modelling,</li><li>drafting.</li></ul><p>We use:</p>",
+		"list": [
+			"Autodesk Alias",
+			"SolidWorks",
+			"Siemens NX"
+		],
+		"offer": "Industrial Forms offer design service:",
+		"items": [
+			{
+				"name": "Concept drafting",
+				"icon": "/assets/img/cad-icon-1.png",
+				"desc": "We using Hand Sketches- still singularly the most powerful design expression tool ever"
+			},
+			{
+				"name": "3d Modelling",
+				"icon": "/assets/img/cad-icon-2.png",
+				"desc": "We can work with industry leading software which include Solid Works, Siemens NX, Autocad, or software which your business use."
+			},
+			{
+				"name": "2d Drafting",
+				"icon": "/assets/img/cad-icon-3.png",
+				"desc": "With years of experience we would produce detailed drawing for manufacturing purposes."
+			},
+			{
+				"name": "Manufacturing of fully functional prototype.",
+				"icon": "/assets/img/cad-icon-4.png",
+				"desc": "We deliver fully functional model of your concept- straight to your office. This helps our client see if all design is fully functional as design intend."
+			}
+		]
+	},
+	"designOptimization": {
+		"metaTitle": "Design optimization",
+		"title": "Design optimization",
+		"metaDesc": "Engineers who can help develop your products using 3D Printing, cheaper and more accessible than ever before!",
+		"desc": "At Industrial Forms we are using additive manufacturing, AM, to accomplish <strong>rapid product development</strong> in fewer steps than is possible with conventional manufacturing.",
+		"content": "<p>During and after the concept phase it is possible to physically interact and test  your prototype product in many <strong>design iterations or variations</strong>, with <strong>much reduced  time, effort and cost</strong>. But there’s more, increasingly additive manufacturing can produce production or end use parts, and we have experience in this. We have produced small to medium production runs from <strong>10’s to a 1000 parts</strong>, fully <strong>functional and in the field</strong>.</p><p>As an example, in a two-stage process, we have used AM to explore many design options and made batches of 20 or so test parts, then used <strong>Reaction Injection Moulding</strong>, RIM, to produce high performance rigid polyurethane parts (in a variety of forms and colour) which are able to withstand impact, heat and adverse environmental conditions beyond the capabilities of AM and in many cases conventional thermo-injection moulding. Here, with modest mould tools costs we can easily produce 100, 500 parts or more. We call this process Additive Production, AP. This combination is suited to developing conventional parts, truly AM geometry can only use strictly AM processes.</p>"
+	},
+	"additiveProduction": {
+		"metaTitle": "Additive production",
+		"title": "Additive production",
+		"metaDesc": "Engineers who can help develop your products using 3D Printing, cheaper and more accessible than ever before!",
+		"desc": "Industrial forms offer “Additive Production” service. Our company can guide you project from concept prototype work, true low volume, initial production and to productions runs up to 1000 off. Overall costs of projects will be lover than with injection moulding and any other technology. With us there is no tooling and fixture costs, associated with traditional manufacturing. We offer range of fully functional materials such as ABS, Nilon, PLA, PETT, Polycarbonate and Carbon Fiber.",
+		"email": "Sent us a email and one of our engineers will get in touch.",
+		"advantages": "Advantages of <br/>additive production:",
+		"items": [
+			"Very low unit cost",
+			"Previously impossible shapes are possible",
+			"Great design freedom and flexibility",
+			"No tooling or fixture cost"
+		]
+	},
+	"materials": {
+		"details": "View details",
+		"metaTitle": "Materials",
+		"title": "MATERIALS – POLYMERS RESINS, METAL ALLOYS",
+		"metaDesc": "Range of materials which we offer",
+		"sub": "RANGE OF MATERIALS",
+		"desc": "<p>In Additive Manufacturing processes, we can produce plastic polymer and metal alloy parts.</p><p>The raw material or feedstock used in AM can range from thermoplastic filament or pellets for FDM technologies, liquid resins for SLA and Jetted technology, and metal powders for alloy metal printing. The FDM or FFD machines use filaments of a wide range of thermoplastics polymers, whereas the SLA machines use liquid photopolymer resins that mimic polymers such as ABS, PP and mainly PMMA (Acrylic) plastics. For metal printing, it is possible to produce intricate and super efficient forms and structures using advanced alloys: Stainless Steels, Titanium, Aluminium, Nickel based alloys: Inconel, Monel and more.</p><p>Your choice of material will no doubt depend on the application, but generally for plastics the FDM machines will make cost effective, stronger and more functional items whereas the SLA machines will produce more detailed, semi-functional parts. By semi-functional we mean they will be fit to demonstrate how a product will work but will not match the ‘strength’ of their FDM equivalents. Metal components are fully functional but are high cost.</p><p>Further, we are increasingly integrating Reaction Injection Moulding, RIM processes into our repertoire of manufacturing processes. Although not an AM process, it is certainly worth considering if you are intending to make volumes upwards of a handful, if geometrically feasible and economically viable. The materials used, poly-urethanes and silicone produce both high quality parts with high performing mechanical properties – they are fit for extreme conditions experienced in desert, polar and marine environments.</p>"
+	},
+	"processes": {
+		"details": "View details",
+		"metaTitle": "Processes",
+		"title": "Processes",
+		"metaDesc": "Engineers who can help develop your products using 3D Printing, cheaper and more accessible than ever before!",
+		"sub": "",
+		"desc": "<p>Additive Manufacturing, AM is essentially achieved by depositing fluidised material in layers  onto a flat build platform. As the layers accumulate the desired part emerges. Crucially, both the exterior and interior profiles and structure of the part are constructed. Complex forms and geometrical features such as overhangs, blended surfaces, thread forms, cavities and much more can be deposited in one print operation. Further, it is possible to print mating or near readily assembled parts such as gears, hinges, chain links, housed bearings, all in one go. In fact this manufacturing method seems to provide boundless possibilities. Objects can be created in a single operation, not possible with conventional manufacturing, CM processes.</p><p>We can review your project and help advise the most efficient and cost effective process to use.</p>"
+	},
+	"about": {
+		"metaTitle": "About us",
+		"title": "About <span>us</span>",
+		"metaDesc": "Engineers who can help develop your products using 3D Printing, cheaper and more accessible than ever before!",
+		"p1": "We are a team passionate about invention and innovation and all imaginations to do with science, engineering, product design, architecture and art – in short <strong>creativity! We get immense satisfaction helping our clients develop their products.</strong>",
+		"p2": "Unusual to a New Product Development consultancy, amongst us we have experienced manufacturing and process development engineers who use state of the art tooling.",
+		"p3title": "We have experience across many industry sectors.",
+		"p3": "Forever interested in the latest scientific and technological developments and how we as makers can bring these into physical reality, we want to improve tools and things for all to benefit from whilst imbedding environmental considerations and enhancement at design inception.",
+		"btn": "Portfolio",
+		"rightText": "Creative technology"
+	},
+	"metaTitle": "Industrial Forms",
+	"metaDesc": "Engineers who can help develop your products using 3D Printing, cheaper and more accessible than ever before",
+	"cookies": "<h3>Cookies</h3><p>Cookies info</p>"
+}

@@ -1,0 +1,376 @@
+.portfolio {
+	background-color: #ebeef6;
+	background: linear-gradient(to right, #ebeef6 -1%,#ffffff 74%,#ebeef6 100%,#ebeef6 100%);
+	overflow: hidden;
+
+	.container {
+		padding: 20px 0;
+	}
+
+	.top {
+		text-align: center;
+
+		p {
+			max-width: 600px;
+			margin: 10px auto;
+		}
+	}
+
+	.categories {
+		text-align: center;
+		margin: 30px 0;
+
+		li {
+			display: inline-block;
+
+			a {
+				position: relative;
+				display: inline-block;
+				text-decoration: none;
+				color: #7d8790;
+				font-weight: 900;
+				text-transform: uppercase;
+				margin: 0 20px;
+				opacity: 0.6;
+				transition: opacity .3s $CubicEaseInOut;
+				padding-bottom: 10px;
+				margin-bottom: 5px;
+
+				&:after {
+					content: "";
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					width: 100%;
+					height: 2px;
+					background-color: #7d8790;
+					transition: transform .3s $CubicEaseInOut;
+					transform: scaleX(0);
+				}
+
+				&.active, &:hover {
+					opacity: 1;
+
+					&:after {
+						transform: scaleX(1);
+					}
+				}
+			}
+		}
+	}
+
+	.view-holder {
+		position: relative;
+	}
+
+	.gallery {
+		padding: 40px 0 20px;
+
+		@include vHD {
+			display: flex;
+			flex-flow: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		.album {
+			height: 180px;
+			background-color: #9bd5f5;
+			margin-bottom: 40px;
+
+			@include vHD {
+				min-width: 48%;
+				max-width: 48%;
+				width: 48%;
+			}
+
+			@include XGA {
+				min-width: 31%;
+				max-width: 31%;
+				width: 31%;
+			}
+
+			@include HD {
+				min-width: 23%;
+				max-width: 23%;
+				width: 23%;
+			}
+
+			span {
+				display: inline-block;
+				padding: 5px;
+				background-color: rgba(255, 255, 255, 0.6);
+
+				@include HD {
+					position: relative;
+					display: block;
+					width: 100%;
+					text-align: center;
+					background-color: transparent;
+					top: -25px;
+					opacity: 0;
+					transition: opacity .2s $CubicEaseInOut;
+				}
+			}
+
+			a {
+				display: inline-block;
+				text-decoration: none;
+				text-transform: uppercase;
+				color: #7d8790;
+				font-weight: 900;
+				font-size: 13px;
+			}
+
+			&:hover {
+				.album-inner {
+					transform: translate(-10px, -10px);
+					box-shadow: rgba(47, 100, 129, 0.25) 3px 15px 40px;
+				}
+
+				@include HD {
+					span {
+						opacity: 1;
+					}
+				}
+			}
+
+			.album-inner {
+				display: block;
+				width: 100%;
+				height: 100%;
+				background-size: cover;
+				background-position: center;
+				transition: transform .2s $CubicEaseInOut, box-shadow .2s $CubicEaseInOut;
+			}
+		}
+	}
+
+	.detailed-view {
+		.gallery-top {
+			text-align: center;
+			border-radius: 10px;
+			border: #9bd5f5 solid 2px;
+			padding-bottom: 40px;
+
+			h2 {
+				margin-top: 60px;
+
+				@include vHD {
+					margin-top: 20px;
+				}
+			}
+
+			.back {
+				position: absolute;
+				right: 30px;
+				top: 18px;
+				display: inline-block;
+				padding: 10px;
+				line-height: 0.9;
+				font-size: 16px;
+				font-weight: 900;
+				color: #fff;
+				text-decoration: none;
+				background-color: #9bd5f5;
+				border-radius: 10px;
+				text-transform: uppercase;
+				cursor: pointer;
+				z-index: 1000;
+			}
+		}
+	}
+
+	.gallery-holder {
+		position: relative;
+		width: calc( 100% - 60px );
+		margin-left: 30px;
+		margin-top: -40px;
+		text-align: center;
+		height: 40vw;
+
+		img {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			display: inline-block;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+
+	.prev, .next {
+		position: absolute;
+		left: 0;
+		top: calc( 50% - 160px );
+		width: 40px;
+		height: 40px;
+		background-color: #9bd5f5;
+		text-align: center;
+		border-radius: 10px;
+		padding: 10px 0;
+		cursor: pointer;
+		z-index: 10;
+
+		@include vHD {
+			top: calc( 50% - 180px );
+		}
+
+		@include HD {
+			width: 60px;
+			height: 60px;
+			padding: 20px 0;
+		}
+
+		img {
+			display: inline-block;
+		}
+	}
+
+	.next {
+		position: absolute;
+		left: auto;
+		right: 0;
+
+		img {
+			transform: rotate(180deg);
+		}
+	}
+
+	.gallery-small {
+		position: relative;
+		margin: 30px auto;
+
+		.prev, .next {
+			position: absolute;
+		    left: -10px;
+		    top: calc( 50% - 15px );
+		    width: 30px;
+		    height: 30px;
+		    border-radius: 50%;
+		    background-color: #ef8049;
+		    cursor: pointer;
+		    z-index: 100;
+
+		    @include vHD {
+		    	left: -30px;
+		    }
+
+		    @include XGA {
+		        left: -60px;
+		        width: 40px;
+		        height: 40px;
+		    }
+
+		    @include UXGA {
+		    	left: -13%;
+		    }
+
+		    &:before {
+		        content: "";
+		        position: absolute;
+		        left: 10px;
+		        top: 8px;
+		        width: 10px;
+		        height: 10px;
+		        border-left: #fff solid 3px;
+		        border-bottom: #fff solid 3px;
+		        transform: rotate(45deg);
+
+		        @include XGA {
+		        	left: 15px;
+		        	top: 13px;
+		        }
+		    }
+		}
+
+		.next {
+			left: auto;
+			right: -10px;
+
+			&:before {
+				left: 7px;
+				transform: rotate(-135deg);
+
+				@include XGA {
+					left: 11px;
+				}
+			}
+
+			@include vHD {
+				right: -30px;
+			}
+
+			@include XGA {
+				right: -60px;
+			}
+			
+			@include UXGA {
+				right: -13%;
+			}
+		}
+
+		.gallery-inner {
+			position: relative;
+			display: flex;
+			flex-flow: row;
+			flex-wrap: nowrap;
+			padding: 40px 0;
+
+			li {
+				position: relative;
+				min-width: 50%;
+				max-width: 50%;
+				padding-right: 4%;
+				height: 240px;
+				user-select: none;
+				transition: transform .4s $QuadEaseInOut;
+				
+				&:before {
+					content: "";
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 92%;
+					height: 100%;
+					background-color: #9bd5f5;
+
+					@include HD {
+						width: 91%;
+					}
+				}
+
+				@include HD {
+					min-width: 33.33%;
+					max-width: 33.33%;
+					width: 33.33%;
+					padding-right: 3%;
+				}
+
+				.img-holder {
+					position: relative;
+					width: 100%;
+					height: 100%;
+					background-color: #fff;
+					transition: transform .2s $CubicEaseInOut, box-shadow .2s $CubicEaseInOut;
+					cursor: pointer;
+
+					&:hover {
+						transform: translate(-10px, -10px);
+						box-shadow: rgba(47, 100, 129, 0.25) 5px 15px 60px;
+					}
+
+					img {
+						position: absolute;
+						left: 50%;
+						top: 50%;
+						transform: translate(-50%, -50%);
+						max-width: 95%;
+						max-height: 95%;
+					}
+				}
+			}
+		}
+	}
+}

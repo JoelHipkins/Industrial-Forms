@@ -1,0 +1,143 @@
+// ------------------------------------------------
+// Site Name: New Better CMS
+// Author: Jakub Strączyński
+// ------------------------------------------------
+
+
+// ----------------------------
+//	TOOLS & UTILS
+// ----------------------------
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:    border-box;
+	box-sizing:         border-box;    
+}
+
+// ----------------------------
+//	COLORS
+// ----------------------------
+
+$darkblue: #0a0b1a;
+$blue: #ecf0f5;
+$lightblue: #eaebf7;
+
+// ----------------------------
+//	EASING
+// ----------------------------
+
+$CubicEaseIn  	: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+$CubicEaseOut  	: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+$CubicEaseInOut : cubic-bezier(0.645, 0.045, 0.355, 1.000);
+$QuadEaseIn   	: cubic-bezier(0.550, 0.085, 0.680, 0.530);
+$QuadEaseOut  	: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+$QuadEaseInOut  : cubic-bezier(0.455, 0.030, 0.515, 0.955);
+$ExpoEaseOut  	: cubic-bezier(0.190, 1.000, 0.220, 1.000);
+$ExpoEaseInOut  : cubic-bezier(1.000, 0.000, 0.000, 1.000);
+
+// ----------------------------
+//	TRANSITION
+// ----------------------------
+
+@mixin transition($property) {
+  -webkit-transition: $property;
+  -moz-transition: $property;
+  -o-transition: $property;
+  transition: $property;
+}
+
+@mixin transform($transform) {
+	transform: $transform;
+	-webkit-transform: $transform;
+	-o-transform: $transform;
+	-moz-transform: $transform;
+	-ms-transform: $transform;
+}
+
+// ----------------------------
+//  TRANSITION
+// ----------------------------
+
+@mixin transition($transition...) {
+  // defining prefixes so we can use them in mixins below
+  $prefixes:      ("-webkit", "-ms", "-o",  "");
+  @each $prefix in $prefixes {
+    #{$prefix}-transition: $transition;
+  }
+
+  transition: $transition;
+}
+
+// ----------------------------
+//	Break Points
+// ----------------------------
+
+$screen-mobile: 400px;
+$screen-sh: 500px;
+$screen-md: 766px;
+$screen-nav: 900px;
+$screen-md-h: 1020px;
+$screen-md-h2: 1030px;
+$screen-lg: 1200px;
+$screen-lg1400: 1400px;
+$screen-slg: 1600px;
+
+@mixin small-h {
+    @media screen and (max-height: $screen-mobile) {
+        @content;
+    }
+}
+
+@mixin small-h-500 {
+    @media screen and (max-height: $screen-sh) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media screen and (min-width: $screen-sh) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media screen and (min-width: $screen-md) {
+        @content;
+    }
+}
+
+@mixin nav {
+    @media screen and (min-width: $screen-nav) {
+        @content;
+    }
+}
+
+@mixin md-h2 {
+    @media screen and (min-width: $screen-md-h2) {
+        @content;
+    }
+}
+
+@mixin md-h {
+    @media screen and (min-width: $screen-md-h) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media screen and (min-width: $screen-lg) {
+        @content;
+    }
+}
+
+@mixin lg1400 {
+    @media screen and (min-width: $screen-lg1400) {
+        @content;
+    }
+}
+
+@mixin slg {
+    @media screen and (min-width: $screen-slg) {
+        @content;
+    }
+}
